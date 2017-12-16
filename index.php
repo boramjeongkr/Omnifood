@@ -4,16 +4,16 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Omnifood is a premium food delivery service with the mission to bring affordable and healty meals to as many people as possible.">
-
+        
         <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
         <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
-        <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic" rel="stylesheet" type="text/css">
-        <title>Omnifood3333s</title>
-
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+        <title>Omnifood</title>
+        
         <link rel="apple-touch-icon" sizes="57x57" href="/resources/favicons/apple-touch-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="/resources/favicons/apple-touch-icon-60x60.png">
         <link rel="apple-touch-icon" sizes="72x72" href="/resources/favicons/apple-touch-icon-72x72.png">
@@ -34,7 +34,7 @@
         <meta name="msapplication-TileImage" content="/resources/favicons/mstile-144x144.png">
         <meta name="msapplication-config" content="/resources/favicons/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
-
+        
     </head>
     <body>
         <header>
@@ -56,9 +56,9 @@
                 <a class="btn btn-full js--scroll-to-plans" href="#">I'm hungry</a>
                 <a class="btn btn-ghost js--scroll-to-start" href="#">Show me more</a>
             </div>
-
+            
         </header>
-
+        
         <section class="section-features js--section-features" id="features">
             <div class="row">
                 <h2>Get food fast &mdash; not fast food</h2>
@@ -66,7 +66,7 @@
                     Hello, we're Omnifood, your new premium food delivery service. We know you're always busy. No time for cooking. So let us take care of that, we're really good at it, we promise!
                 </p>
             </div>
-
+            
             <div class="row js--wp-1">
                 <div class="col span-1-of-4 box">
                     <i class="ion-ios-infinite-outline icon-big"></i>
@@ -96,9 +96,9 @@
                         We don't limit your creativity, which means you can order whatever you feel like. You can also choose from our menu containing over 100 delicious meals. It's up to you!
                     </p>
                 </div>
-            </div>
+            </div>   
         </section>
-
+        
         <section class="section-meals">
             <ul class="meals-showcase clearfix">
                 <li>
@@ -145,8 +145,8 @@
                 </li>
             </ul>
         </section>
-
-
+        
+        
         <section class="section-steps" id="works">
             <div class="row">
                 <h2>How it works &mdash; Simple as 1, 2, 3</h2>
@@ -168,13 +168,13 @@
                         <div>3</div>
                         <p>Enjoy your meal after less than 20 minutes. See you the next time!</p>
                     </div>
-
+                    
                     <a href="#" class="btn-app"><img src="resources/img/download-app.svg" alt="App Store Button"></a>
                     <a href="#" class="btn-app"><img src="resources/img/download-app-android.png" alt="Play Store Button"></a>
                 </div>
             </div>
         </section>
-
+        
         <section class="section-cities" id="cities">
             <div class="row">
                 <h2>We're currently in these cities</h2>
@@ -245,9 +245,9 @@
                     </div>
                 </div>
             </div>
-
+            
         </section>
-
+        
         <section class="section-testimonials">
             <div class="row">
                 <h2>Our customers can't live without us</h2>
@@ -273,8 +273,8 @@
                 </div>
             </div>
         </section>
-
-
+        
+        
         <section class="section-plans js--section-plans" id="plans">
             <div class="row">
                 <h2>Start eating healthy today</h2>
@@ -342,31 +342,36 @@
                 </div>
             </div>
         </section>
-
+        
             <div class="map-box">
-
+                
             <div class="map"></div>
-
+                
                 <div class="form-box" id="form">
                 <div class="row">
                     <h2>We are happy to hear from you.</h2>
+                    </div>
+                    
                 <div class="row">
                     <form method="post" action="mailer.php" class="contact-form">
-
-                        <?php
+                        
+                        
                         <div class="row">
-                            <div class="form-messages success">
-                            Thank you! Your message has been sent.
-                            </div>
-
-                            <!-- <div class="form-messages error">
-                            Oops! Something wrong. Please try again!
-                            </div> -->
-                        </div>
-
-                        ?>
+                            
+                            <?php
+                            if($_GET['success'] == 1) {
+                                echo "<div class=\"form-messages success\">Thank you! Your message has been sent.</div>";
+                            }
+                            
+                            if($_GET['success'] == -1) {
+                                echo "<div class=\"form-messages error\"> Oops! Something wrong. Please try again!</div>";
+                            }
+                            ?>
+                            
+                         </div>
+                        
                         <div class="row">
-
+                            
                             <div class="col span-1-of-3">
                                 <label for="name">Name</label>
                             </div>
@@ -423,9 +428,9 @@
                     </form>
 
                 </div>
-                </div>
+                
             </div>
-
+        
         <footer>
             <div class="row">
                 <div class="col span-1-of-2">
@@ -452,7 +457,7 @@
                 </p>
             </div>
         </footer>
-
+        
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
     <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -462,8 +467,8 @@
     <script src="resources/js/gmaps.js"></script>
     <script src="resources/js/script.js"></script>
 
-
-
+    
+    
 <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106161400-1"></script>
     <script>
@@ -473,7 +478,7 @@
 
       gtag('config', 'UA-106161400-1');
     </script>
-
-    </body>
-
+    
+    </body>  
+    
 </html>
